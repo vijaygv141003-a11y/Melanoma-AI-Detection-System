@@ -1,0 +1,126 @@
+{
+  "abcde": {
+    "interpretation": "Lesion has some concerning features - recommend dermatology evaluation",
+    "risk_level": "Moderate",
+    "scores": {
+      "asymmetry": 0,
+      "border": 1,
+      "color": 2,
+      "diameter": 2,
+      "evolving": 0
+    },
+    "total_score": 5
+  },
+  "confidence": 0.3802572677327984,
+  "confidence_metrics": {
+    "certainty_score": 0.0,
+    "entropy": 0.8081024935266794,
+    "margin": 0.13102247269386366,
+    "max_probability": 0.3802572677327984,
+    "probability_distribution": {
+      "Basal Cell Carcinoma": 0.24923479503893473,
+      "Benign Lesion": 0.23438301004558168,
+      "Keratosis": 0.08663654014511742,
+      "Melanoma": 0.019667100494003813,
+      "Nevus (Mole)": 0.029821286543563925,
+      "Squamous Cell Carcinoma": 0.3802572677327984
+    },
+    "top_predictions": [
+      [
+        "Squamous Cell Carcinoma",
+        0.3802572677327984
+      ],
+      [
+        "Basal Cell Carcinoma",
+        0.24923479503893473
+      ],
+      [
+        "Benign Lesion",
+        0.23438301004558168
+      ]
+    ],
+    "variance": 0.01729404925239077
+  },
+  "dermoscopic": {
+    "dominant_pattern": "homogeneous",
+    "patterns": {
+      "dots_globules": 0.0,
+      "homogeneous": 0.6086957421531247,
+      "leaf_like": 0.0,
+      "network": 0.0,
+      "parallel_lines": 0.0,
+      "pigment_network": 0.0,
+      "streaks": 0.0
+    },
+    "risk_category": "Atypical Pattern"
+  },
+  "explainability": {
+    "confidence": 0.3802572677327984,
+    "diagnosis": "Squamous Cell Carcinoma",
+    "feature_explanation": {
+      "detection_indicators": "Detected key morphologic features",
+      "key_features": [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3"
+      ]
+    },
+    "important_regions": {
+      "area_percentage": 25.5,
+      "importance_score": 0.845,
+      "interpretation": "Model found focal regions important for diagnosis"
+    }
+  },
+  "image_path": "static/uploads\\test_lesion.jpg",
+  "predictions": {
+    "Basal Cell Carcinoma": 0.24923479503893473,
+    "Benign Lesion": 0.23438301004558168,
+    "Keratosis": 0.08663654014511742,
+    "Melanoma": 0.019667100494003813,
+    "Nevus (Mole)": 0.029821286543563925,
+    "Squamous Cell Carcinoma": 0.3802572677327984
+  },
+  "risk_assessment": {
+    "factor_breakdown": {
+      "abcde_score": {
+        "contribution": 0.15,
+        "description": "Normalized ABCDE scoring (Asymmetry, Border, Color, Diameter, Evolving)",
+        "name": "ABCDE Criteria Score",
+        "value": 0.5,
+        "weight": 0.3
+      },
+      "dermoscopic": {
+        "contribution": 0.0,
+        "description": "Analysis of dermoscopic patterns and characteristics",
+        "name": "Dermoscopic Features",
+        "value": 0.0,
+        "weight": 0.2
+      },
+      "model_prediction": {
+        "contribution": 0.152,
+        "description": "Probability of high-risk diagnosis from AI model",
+        "name": "AI Model Prediction",
+        "value": 0.38,
+        "weight": 0.4
+      },
+      "uncertainty": {
+        "contribution": -0.035,
+        "description": "Penalty factor for high model uncertainty",
+        "name": "Model Uncertainty",
+        "value": 0.346,
+        "weight": -0.1
+      }
+    },
+    "factors": {
+      "abcde_score": 0.5,
+      "dermoscopic": 0.0,
+      "model_prediction": 0.3802572677327984,
+      "uncertainty": 0.34588500460622973
+    },
+    "recommendation": "Routine follow-up. Monitor for any changes. No urgent action needed.",
+    "risk_level": "low",
+    "risk_percentage": 26.8,
+    "risk_score": 0.268
+  },
+  "top_prediction": "Squamous Cell Carcinoma"
+}

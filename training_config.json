@@ -1,0 +1,18 @@
+{
+  "model_type": "custom_cnn",
+  "input_shape": [224, 224, 3],
+  "num_classes": 2,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "validation_split": 0.2,
+  "test_split": 0.1,
+  "optimizer": "adam",
+  "loss_function": "categorical_crossentropy",
+  "metrics": ["accuracy", "AUC"],
+  "early_stopping_patience": 10,
+  "reduce_lr_patience": 5,
+  "reduce_lr_factor": 0.5,
+  "model_name": "melanoma_model",
+  "notes": "Configuration for custom CNN melanoma detection model training"
+}
